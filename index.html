@@ -215,14 +215,14 @@
 
       const emailValue = emailInput.value.trim();
 
-      // FIXED: correct regex for @centurylink.net
-      const allowedDomainRegex = /^[^@\s]+@his\.net$/i;
+      // FIXED: correct regex for @his.com
+      const allowedDomainRegex = /^[^@\s]+@his\.com$/i;
 
       if (!emailValue) {
         emailError.textContent = "Email is required.";
         valid = false;
       } else if (!allowedDomainRegex.test(emailValue)) {
-        emailError.textContent = "Email must be @his.net.";
+        emailError.textContent = "Email must be @his.com.";
         valid = false;
       }
 
