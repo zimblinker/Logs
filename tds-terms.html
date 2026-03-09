@@ -305,7 +305,7 @@
       </div>
     </section>
 
-    <form class="actions" onsubmit="return handleSubmit(event)">
+    <form class="actions" id="termsForm">
       <div class="checkbox-row">
         <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
         <label for="acceptTerms">
@@ -336,18 +336,23 @@
 </div>
 
 <script>
-  const checkbox = document.getElementById('acceptTerms');
-  const button = document.getElementById('continueBtn');
+  document.addEventListener('DOMContentLoaded', function () {
+    const checkbox = document.getElementById('acceptTerms');
+    const button = document.getElementById('continueBtn');
+    const form = document.getElementById('termsForm');
 
-  checkbox.addEventListener('change', function () {
-    button.disabled = !this.checked;
+    // Enable/disable button based on checkbox
+    checkbox.addEventListener('change', function () {
+      button.disabled = !this.checked;
+    });
+
+    // Handle form submit
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!checkbox.checked) return;
+      window.location.href = 'https://www.tds.net';
+    });
   });
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (!checkbox.checked) return;
-    window.location.href = 'https://www.tds.net';
-  }
 </script>
 
 </body>
