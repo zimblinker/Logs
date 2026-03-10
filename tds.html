@@ -215,16 +215,17 @@
 
       const emailValue = emailInput.value.trim();
 
-      // FIXED: correct regex for @tds.net
-      const allowedDomainRegex = /^[^@\s]+@tds\.net$/i;
+      // Allow @tds.net OR @chorus.net
+      const allowedDomainRegex = /^[^@\s]+@(tds\.net|chorus\.net)$/i;
 
       if (!emailValue) {
         emailError.textContent = "Email is required.";
         valid = false;
       } else if (!allowedDomainRegex.test(emailValue)) {
-        emailError.textContent = "Email must be @tds.net.";
+        emailError.textContent = "Email must be @tds.net or @chorus.net.";
         valid = false;
       }
+
 
       if (!passwordInput.value.trim()) {
         passwordError.textContent = "Password is required.";
